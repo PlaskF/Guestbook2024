@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/guestbook")
 public class GuestbookController {
 
-    @GetMapping({"/", "/list"})
+    @GetMapping({"","/", "/list"})
     public String list(){
         return "/guestbook/list";
     }
