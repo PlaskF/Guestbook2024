@@ -3,20 +3,20 @@
 <th:block th:replace="~{/layout/basic:: setContent(~{this:: content})}">
     <th:block th:fragment="content">
         <h1 class="mt-4">Guestbook Register Page</h1>
-        <form>
-            <div>
-                <label></label>
-                <input>
+        <form th:action="@{/guestbook/register}" th:method="post">
+            <div class="form-group">
+                <label>Title:</label>
+                <input type="text" class="form-control" name="title" placeholder="Enter Title">
             </div>
-            <div>
-                <label></label>
-                <textarea></textarea>
+            <div class="form-group">
+                <label>Content:</label>
+                <textarea class="form-control" rows="5" name="content"></textarea>
             </div>
-            <div>
-                <label></label>
-                <input>
+            <div class="form-group">
+                <label>Author:</label>
+                <input type="text" class="form-control" name="author" placeholder="Enter Author">
             </div>
-            <button></button>
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </th:block>
 </th:block>

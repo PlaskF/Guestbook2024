@@ -90,6 +90,9 @@
     scroll-behavior: smooth;
   }
 }
+.form-group{
+  margin: 10px;
+}
 
 body {
   margin: 0;
