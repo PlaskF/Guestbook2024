@@ -14,6 +14,11 @@ public interface GuestbookService {
     PageResultDTO<GuestbookDTO, Guestbook> getList(PageRequestDTO requestDTO);
     GuestbookDTO read(Long gno);
 
+    // 글 제목 & 내용 수정 기능
+    void modify(GuestbookDTO dto);
+    // 글 삭제 기능
+    void remove(Long gno);
+
     default Guestbook dtoToEntity(GuestbookDTO dto) {
         Guestbook entity = Guestbook.builder()
                 .gno(dto.getGno())
