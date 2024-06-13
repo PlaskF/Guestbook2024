@@ -55,7 +55,7 @@ public class GuestbookController {
     @PostMapping({"/modify"})
     public String modify(GuestbookDTO dto, @ModelAttribute("requestDTO") PageRequestDTO requestDTO, RedirectAttributes redirectAttributes) {
         service.modify(dto);
-        redirectAttributes.addFlashAttribute("page", requestDTO.getPage());
+        redirectAttributes.addAttribute("page", requestDTO.getPage());
         redirectAttributes.addAttribute("gno", dto.getGno());
         return "redirect:/guestbook/read";
     }
